@@ -62,14 +62,8 @@ var Dropzone = React.createClass({
       className += ' active';
     };
 
-    var style = {
-      width: this.props.size || 100,
-      height: this.props.size || 100,
-      borderStyle: this.state.isDragActive ? "solid" : "dashed"
-    };
- 
     return (
-      <div className={className} style={this.props.style || style} onClick={this.onClick} onDragLeave={this.onDragLeave} onDragOver={this.onDragOver} onDrop={this.onDrop}>
+      <div className={this.props.className || className} onClick={this.onClick} onDragLeave={this.onDragLeave} onDragOver={this.onDragOver} onDrop={this.onDrop}>
         <input style={{display: 'none' }} type='file' multiple ref='fileInput' onChange={this.onDrop} />
         {this.props.children}
       </div>
