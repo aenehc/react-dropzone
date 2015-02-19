@@ -64,7 +64,6 @@ var Dropzone = React.createClass({
 
     return (
       <div className={this.props.className || className} onClick={this.onClick} onDragLeave={this.onDragLeave} onDragOver={this.onDragOver} onDrop={this.onDrop}>
-        <input style={{display: 'none' }} type='file' multiple ref='fileInput' onChange={this.onDrop} />
         {this.props.children}
       </div>
     );
