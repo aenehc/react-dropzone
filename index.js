@@ -51,10 +51,6 @@ var Dropzone = React.createClass({
     }
   },
 
-  onClick: function () {
-    this.refs.fileInput.getDOMNode().click();
-  },
-
   render: function() {
 
     var className = 'dropzone';
@@ -63,7 +59,7 @@ var Dropzone = React.createClass({
     };
 
     return (
-      <div className={this.props.className || className} onClick={this.onClick} onDragLeave={this.onDragLeave} onDragOver={this.onDragOver} onDrop={this.onDrop}>
+      <div className={this.props.className || className} onDragLeave={this.onDragLeave} onDragOver={this.onDragOver} onDrop={this.onDrop}>
         {this.props.children}
       </div>
     );
